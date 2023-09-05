@@ -58,7 +58,7 @@
     "map-stream": "0.0.7",
     "merge-stream": "2.0.0",
     "imagemin-cli": "^7.0.0",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "node-notifier": "10.0.1",
     "postcss": "8.4.24",
     "sass": "1.63.6",
