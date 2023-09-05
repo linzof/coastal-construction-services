@@ -1,0 +1,28 @@
+#masthead{
+
+nav{
+    background-color: $secondary-color;
+
+    a.nav-link{
+        color: $white;
+    }
+    a.nav-link:active{
+        color: $white;
+    }
+}
+.dropdown-menu{
+    border: 0;
+    border-radius: 0;
+    font-size: inherit;
+    left: auto;
+    width: auto;
+    top: auto;
+    margin-top: 0;
+    margin: 1rem !important;
+}
+button.navbar-toggler{
+    color: $white;
+    background-color: $white;
+    margin-bottom: 2rem !important;
+}
+}

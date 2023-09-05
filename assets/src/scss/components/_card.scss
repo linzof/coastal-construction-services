@@ -1,0 +1,85 @@
+.insights,
+.tag-template {
+	.card {
+		display: block;
+		position: relative;
+		margin-bottom: 1.5rem;
+		min-height: 308px;
+		border: none;
+		border-radius: 0;
+		border: 1px solid $grey-200;
+
+		&:hover,
+		&:focus {
+			.card-gradient {}
+		}
+		&-img {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			height: 180px;
+		}
+
+		&-body {
+			width: 100%;
+			color: $black;
+			text-align: left;
+			padding: 2rem;
+			//position: absolute;
+			bottom: 0;
+			z-index: 105;
+		}
+
+		&-gradient {
+			background: linear-gradient(transparent, #0A0A0A);
+			width: 100%;
+			height: 280px;
+			position: absolute;
+			bottom: 0;
+			z-index: 100;
+		}
+
+		&-category {
+			font-weight: $font-light;
+			text-transform: uppercase;
+			margin-bottom: .5rem;
+		}
+
+		&-title {
+			font-weight: $font-bold;
+		}
+
+		&-text {
+			@include font-size(1.4);
+			font-weight: $font-light;
+			min-height: 42px;
+			margin-bottom: 2rem;
+		}
+
+		&-meta {
+			display: flex;
+			justify-content: space-between;
+			@include font-size(1.4);
+			font-weight: $font-light;
+
+			.card-reading-time {
+				&:before {
+					font-family: "Font Awesome 6 Pro";
+					@include font-size(2.0);
+					font-weight: $font-regular;
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					display: inline-block;
+					font-style: normal;
+					font-variant: normal;
+					line-height: 1;
+					text-rendering: auto;
+					content: "\f017";
+					margin-right: .75rem;
+					position: relative;
+					top: 2px;
+				}
+			}
+		}
+	}
+}

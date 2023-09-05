@@ -1,0 +1,18 @@
+.logo-list {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-list img {
+    display: inline-block;
+    max-width: 95%;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-list img:hover {
+    filter: none;
+    transform: scale(1.2);
+    -webkit-filter: none;
+    -moz-filter: none;
+}

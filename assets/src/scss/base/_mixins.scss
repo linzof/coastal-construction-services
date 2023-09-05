@@ -1,0 +1,130 @@
+// -------------------------------------------------------------------------- //
+//  MIXINS                                                                    //
+// -------------------------------------------------------------------------- //
+
+// Font size REM to PX conversion. To use:
+// @include font-size(1.6);
+// Example: For a 16px font size use 1.6, for 20px use 2.0, etc.
+@mixin font-size($fontSize: 1.6) {
+	font-size: ($fontSize * 10) + px;
+	font-size: $fontSize + rem;
+}
+
+@mixin background-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $rgba) {
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	-webkit-box-shadow: $horizontal $vertical $blur $spread $rgba;
+	-moz-box-shadow: $horizontal $vertical $blur $spread $rgba;
+	box-shadow: $horizontal $vertical $blur $spread $rgba;
+}
+
+@mixin clearfix {
+	clear: both;
+
+	&:before {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin full-width-child {
+	position: relative;
+	width: 100vw !important;
+	left: calc(-50vw + 50%);
+}
+
+// FIR, image replacement method
+// @include FIR('filepath', image height in px, image width in px);
+// @include FIR('samplePath/sampleImage.png', 20px, 20px);
+@mixin FIR($img, $height, $width) {
+	background: url($img) transparent top left no-repeat;
+	background-size: $width $height;
+	display: inline-block;
+	height: $height;
+	overflow: hidden;
+	text-indent: 120%;
+	white-space: nowrap;
+	width: $width;
+}
+
+@mixin invisible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	opacity: 0;
+	transition: opacity 300ms ease-in-out;
+}
+
+@mixin linear-gradient($direction, $rgba1, $rgba2) {
+	background: linear-gradient(to $direction, $rgba1, $rgba2);
+}
+
+@mixin reveal {
+	border: none;
+	clip: auto;
+	height: auto;
+	margin: auto;
+	overflow: visible;
+	padding: inherit;
+	position: static;
+	width: auto;
+	opacity: 1;
+	transition: opacity 300ms ease-in-out;
+}
+
+@mixin rotate($value) {
+	-webkit-transform: rotate($value+deg);
+	-moz-transform: rotate($value+deg);
+	-o-transform: rotate($value+deg);
+	-ms-transform: rotate($value+deg);
+	transform: rotate($value+deg);
+}
+
+@mixin triangle($direction, $size, $color:null) {
+	width: 0;
+	height: 0;
+
+	@if ($direction=="down") {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	}
+
+	@if ($direction=="up") {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	}
+
+	@if ($direction=="right") {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	}
+
+	@if ($direction=="left") {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+
+@mixin css-columns($columns, $gap) {
+	-moz-column-count: $columns;
+	-moz-column-gap: $gap+px;
+	-webkit-column-count: $columns;
+	-webkit-column-gap: $gap+px;
+	column-count: $columns;
+	column-gap: $gap+px;
+}

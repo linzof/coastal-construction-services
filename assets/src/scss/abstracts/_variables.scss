@@ -1,0 +1,63 @@
+// -------------------------------------------------------------------------- //
+//  VARIABLES                                                                 //
+// -------------------------------------------------------------------------- //
+
+
+// Colors
+// ------------------------------------------------------ /
+
+// Brand
+$white: #FFFFFF;
+$black: #111111;
+$secondary-black: #000000;
+$light-blue: #0077C0;
+$cyan: #70F9CA;
+$salmon: #FF625F;
+$lightest-grey: #fafafa;
+$grey-100: #EDEDED;
+$grey-200: #CBCBCB;
+$grey-300: #999999;
+$grey-400: #555555;
+$grey-500: #222222;
+
+// Standard
+$primary-color: $black;
+$secondary-color: $light-blue;
+$accent-color: $cyan;
+
+
+// Modal
+$overlay: rgba(0, 0, 0, .85);
+
+
+// Elements
+// ------------------------------------------------------ /
+$link-color: $secondary-color;
+$link-hover: darken($secondary-color, 10%);
+$link-border: $secondary-color;
+$button-color: $secondary-color;
+$button-hover: darken($secondary-color, 10%);
+$button-text: $white;
+$section-pad: 60px 0;
+
+
+// Fonts
+// ------------------------------------------------------ /
+$primary-font: 'Nunito Sans',
+sans-serif;
+$font-color: $grey-500;
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+// Additional Customized Breakpoint for smaller device
+// ------------------------------------------------------ /
+
+$small-phones: 320px;
+
+// Bootstrap Variables
+// Carousel
+$carousel-control-color: $light-blue;
+$carousel-control-prev-icon-bg: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path  d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"  fill="#{$carousel-control-color}" /></svg>');
+$carousel-control-next-icon-bg: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path  d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z"  fill="#{$carousel-control-color}" /></svg>');

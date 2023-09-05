@@ -1,0 +1,27 @@
+main {
+	// padding-top: 164px;
+	transition: all .25s ease-in-out;
+
+	@include media-breakpoint-down(xl) {
+		padding-top: 102px;
+	}
+	@include media-breakpoint-down(lg) {
+		padding-top: 85px;
+	}
+	@include media-breakpoint-down(md) {
+		padding-top: 70px;
+	}
+
+	.anchor {
+		display: block;
+		position: relative;
+		top: -150px;
+		visibility: hidden;
+		height: 0;
+	}
+
+	ul,
+	ol {
+		margin: 0 0 15px 25px;
+	}
+}

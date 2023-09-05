@@ -1,0 +1,51 @@
+.cta-listing {
+	
+	h4 {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.ctas {
+    p {
+			text-align: center;
+      min-height: 110px;
+      display: flex;
+      align-items: flex-end;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 2rem;
+        min-height: 0;
+        display: inherit;
+      }
+      @include media-breakpoint-only(lg) {
+        min-height: 130px;
+      }
+		}
+
+		.cta {
+			margin-bottom: 4rem;
+
+			&.blue {}
+
+			&.salmon {
+				background: $salmon;
+			}
+
+			&.green {
+				background: $cyan;
+				color: $grey-500;
+			}
+
+			&.grey {
+				background: $grey-500;
+			}
+
+			&.salmon,
+			&.green,
+			&.grey {
+				&:hover {
+					filter: brightness(85%);
+				}
+			}
+		}
+	}
+}

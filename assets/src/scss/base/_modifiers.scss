@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------------- //
+//  CLASS MODIFIERS                                                                     //
+// -------------------------------------------------------------------------- //
+
+// Background Colors
+.bg-primary-color {
+    background-color: $primary-color;
+    color: $white;
+}
+
+.bg-light-blue {
+    background-color: $light-blue;
+    color: $white;
+}
+
+.bg-lightest-grey {
+    background-color: $lightest-grey;
+}
+
+.bg-grey-100 {
+    background-color: $grey-100;
+}
+
+.bg-grey-400 {
+    background-color: $grey-400;
+}
+
+.bg-grey-500 {
+    background-color: $grey-500;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-black {
+    background-color: $secondary-black;
+}

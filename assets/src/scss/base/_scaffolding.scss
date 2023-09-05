@@ -1,0 +1,59 @@
+// -------------------------------------------------------------------------- //
+//  SCAFFOLDING (BASELINE STYLES)                                             //
+// -------------------------------------------------------------------------- //
+
+:root {
+	font-family: $primary-font;
+	font-size: 62.5%;
+	/* 62.5% equates to 16px w/ rems w/o locking into pixel size for accessibility */
+}
+
+::selection {
+	background: $accent-color;
+	color: $grey-500;
+}
+
+body {
+	@include font-size(1.8);
+	font-family: $primary-font;
+	font-weight: $font-regular;
+	font-style: normal;
+	margin: 0;
+	overflow-x: hidden;
+	position: relative;
+	color: $grey-500;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+// Temp quick fix for mobile container
+.container {
+	@include media-breakpoint-down(sm) {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
+}
+
+main {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+section {
+	padding: $section-pad;
+	clear: both;
+}
+
+ol,
+ul {
+	padding: 0;
+}
+
+.sr-only,
+.hide {
+	display: none;
+}
